@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cofh.capable_cauldrons.mixin",
+  "refmap": "mixins.capable_cauldrons.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "client": [],
+  "mixins": [
+    "AbstractCauldronBlockMixin",
+    "DispenserBlockMixin",
+    "PistonBaseBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
