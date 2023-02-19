@@ -23,7 +23,7 @@ public abstract class PistonBaseBlockMixin {
             ),
             cancellable = true
     )
-    private static void isCauldronOrComposter(BlockState state, Level level, BlockPos pos, Direction dir, boolean destroy, Direction dir2, CallbackInfoReturnable<Boolean> callback) {
+    private static void isCauldron(BlockState state, Level level, BlockPos pos, Direction dir, boolean destroy, Direction dir2, CallbackInfoReturnable<Boolean> callback) {
 
         BlockEntity tile = level.getBlockEntity(pos);
         if (tile instanceof CauldronBlockEntity) {
