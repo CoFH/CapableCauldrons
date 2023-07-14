@@ -54,7 +54,7 @@ public class CauldronTank implements IFluidHandler {
     @Override
     public int fill(FluidStack resource, FluidAction action) {
 
-        if (blockEntity.isRemoved() || resource.isEmpty() || !isFluidValid(0, resource)) {
+        if (blockEntity.isRemoved() || resource.isEmpty() || !getFluidInTank(0).isEmpty() || !isFluidValid(0, resource)) {
             return 0;
         }
         FluidStack fluid = getFluidInTank(0);
