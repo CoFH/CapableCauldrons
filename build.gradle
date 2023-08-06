@@ -46,7 +46,7 @@ if (System.getenv('CURSEFORGE_KEY') || project.hasProperty('curseforgeKey')) {
         apiKey = System.getenv("CURSEFORGE_KEY") ?: project.findProperty("curseforgeKey")
 
         project {
-            id = '291926'
+            id = '826695'
             changelogType = 'markdown'
             changelog = "[Changelog on GitHub - ${version}](https://raw.githubusercontent.com/cofh/version/main/${mod_id}/changelog.md)"
             releaseType = "${release_type}"
@@ -63,7 +63,7 @@ if (System.getenv('MODRINTH_TOKEN') || project.hasProperty('modrinthToken')) {
 
     modrinth {
         token = System.getenv("MODRINTH_TOKEN") ?: project.findProperty("modrinthToken")
-        projectId = 'o9s5PfpG'
+        projectId = '3PglWyl6'
         versionNumber = "${mod_version}"
         versionType = "${release_type}"
         changelog = "[Changelog on GitHub - ${version}](https://raw.githubusercontent.com/cofh/version/main/${mod_id}/changelog.md)"
