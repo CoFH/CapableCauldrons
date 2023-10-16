@@ -1,6 +1,6 @@
-package cofh.capable_cauldrons.mixin;
+package cofh.capablecauldrons.mixin;
 
-import cofh.capable_cauldrons.block.entity.CauldronBlockEntity;
+import cofh.capablecauldrons.block.entity.CauldronBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.AbstractCauldronBlock;
 import net.minecraft.world.level.block.EntityBlock;

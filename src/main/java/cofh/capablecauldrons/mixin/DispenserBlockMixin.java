@@ -1,6 +1,6 @@
-package cofh.capable_cauldrons.mixin;
+package cofh.capablecauldrons.mixin;
 
-import cofh.capable_cauldrons.util.CauldronUtils;
+import cofh.capablecauldrons.util.CauldronUtils;
 import net.minecraft.core.dispenser.DispenseItemBehavior;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.ItemStack;

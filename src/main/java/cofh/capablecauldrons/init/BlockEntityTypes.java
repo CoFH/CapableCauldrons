@@ -1,7 +1,7 @@
-package cofh.capable_cauldrons.init;
+package cofh.capablecauldrons.init;
 
-import cofh.capable_cauldrons.CapableCauldrons;
-import cofh.capable_cauldrons.block.entity.CauldronBlockEntity;
+import cofh.capablecauldrons.CapableCauldrons;
+import cofh.capablecauldrons.block.entity.CauldronBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.RegistryObject;
 

@@ -1,7 +1,7 @@
-package cofh.capable_cauldrons;
+package cofh.capablecauldrons;
 
-import cofh.capable_cauldrons.init.BlockEntityTypes;
-import cofh.capable_cauldrons.util.CauldronUtils;
+import cofh.capablecauldrons.init.BlockEntityTypes;
+import cofh.capablecauldrons.util.CauldronUtils;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -15,7 +15,7 @@ public class CapableCauldrons {
 
     public static final String MOD_ID = "capable_cauldrons";
 
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, MOD_ID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MOD_ID);
 
     public CapableCauldrons() {
 

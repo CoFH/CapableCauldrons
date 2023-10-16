@@ -1,11 +1,11 @@
-package cofh.capable_cauldrons.capabilities;
+package cofh.capablecauldrons.capabilities;
 
-import cofh.capable_cauldrons.block.entity.CauldronBlockEntity;
-import cofh.capable_cauldrons.util.CauldronUtils;
+import cofh.capablecauldrons.block.entity.CauldronBlockEntity;
+import cofh.capablecauldrons.util.CauldronUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import org.jetbrains.annotations.NotNull;
 
@@ -42,7 +42,7 @@ public class CauldronTank implements IFluidHandler {
     @Override
     public int getTankCapacity(int tank) {
 
-        return FluidAttributes.BUCKET_VOLUME;
+        return FluidType.BUCKET_VOLUME;
     }
 
     @Override
