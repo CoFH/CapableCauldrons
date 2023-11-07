@@ -1,15 +1,15 @@
-package cofh.capablecauldrons.init;
+package cofh.capablecauldrons.init.registries;
 
 import cofh.capablecauldrons.CapableCauldrons;
-import cofh.capablecauldrons.block.entity.CauldronBlockEntity;
+import cofh.capablecauldrons.common.block.entity.CauldronBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.RegistryObject;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
-public class BlockEntityTypes {
+public class ModBlockEntityTypes {
 
-    private BlockEntityTypes() {
+    private ModBlockEntityTypes() {
 
     }
 

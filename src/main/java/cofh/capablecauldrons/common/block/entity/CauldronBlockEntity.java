@@ -1,7 +1,7 @@
-package cofh.capablecauldrons.block.entity;
+package cofh.capablecauldrons.common.block.entity;
 
-import cofh.capablecauldrons.capabilities.CauldronTank;
-import cofh.capablecauldrons.init.BlockEntityTypes;
+import cofh.capablecauldrons.common.capabilities.CauldronTank;
+import cofh.capablecauldrons.init.registries.ModBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -16,7 +16,7 @@ public class CauldronBlockEntity extends BlockEntity {
 
     public CauldronBlockEntity(BlockPos blockPos, BlockState state) {
 
-        super(BlockEntityTypes.CAULDRON_TILE.get(), blockPos, state);
+        super(ModBlockEntityTypes.CAULDRON_TILE.get(), blockPos, state);
     }
 
     public void replaceBlockAndUpdate(BlockState newBlockState) {

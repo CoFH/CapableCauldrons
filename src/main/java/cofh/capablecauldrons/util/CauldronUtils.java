@@ -1,6 +1,6 @@
 package cofh.capablecauldrons.util;
 
-import cofh.capablecauldrons.block.entity.CauldronBlockEntity;
+import cofh.capablecauldrons.common.block.entity.CauldronBlockEntity;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import net.minecraft.core.BlockPos;

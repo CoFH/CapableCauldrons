@@ -1,6 +1,6 @@
 package cofh.capablecauldrons;
 
-import cofh.capablecauldrons.init.BlockEntityTypes;
+import cofh.capablecauldrons.init.registries.ModBlockEntityTypes;
 import cofh.capablecauldrons.util.CauldronUtils;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,7 +25,7 @@ public class CapableCauldrons {
 
         BLOCK_ENTITY_TYPES.register(modEventBus);
 
-        BlockEntityTypes.register();
+        ModBlockEntityTypes.register();
     }
 
     public void commonSetup(FMLCommonSetupEvent event) {

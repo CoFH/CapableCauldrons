@@ -1,6 +1,6 @@
-package cofh.capablecauldrons.capabilities;
+package cofh.capablecauldrons.common.capabilities;
 
-import cofh.capablecauldrons.block.entity.CauldronBlockEntity;
+import cofh.capablecauldrons.common.block.entity.CauldronBlockEntity;
 import cofh.capablecauldrons.util.CauldronUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluid;

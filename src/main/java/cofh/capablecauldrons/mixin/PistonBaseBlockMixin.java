@@ -1,6 +1,6 @@
 package cofh.capablecauldrons.mixin;
 
-import cofh.capablecauldrons.block.entity.CauldronBlockEntity;
+import cofh.capablecauldrons.common.block.entity.CauldronBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
