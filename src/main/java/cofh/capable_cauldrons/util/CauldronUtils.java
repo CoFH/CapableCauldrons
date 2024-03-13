@@ -4,6 +4,8 @@ import cofh.capable_cauldrons.block.entity.CauldronBlockEntity;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.BlockSource;
+import net.minecraft.core.dispenser.DefaultDispenseItemBehavior;
 import net.minecraft.core.dispenser.DispenseItemBehavior;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.ItemStack;
@@ -13,6 +15,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraft.world.level.block.LevelEvent;
+import net.minecraft.world.level.block.entity.DispenserBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
@@ -63,20 +66,31 @@ public class CauldronUtils {
 
     public static DispenseItemBehavior fillBucket(DispenseItemBehavior defaultReturn) {
 
-        return (source, item) -> {
+        return new DefaultDispenseItemBehavior() {
 
-            Level level = source.getLevel();
-            BlockPos pos = source.getPos().relative(source.getBlockState().getValue(DispenserBlock.FACING));
+            public ItemStack execute(BlockSource source, ItemStack item) {
 
-            if (level.getBlockEntity(pos) instanceof CauldronBlockEntity blockEntity) {
-                Fluid fluid = getFluidForCauldron(blockEntity.getBlockState());
-                if (fluid != null) {
-                    blockEntity.replaceBlockAndUpdate(Blocks.CAULDRON.defaultBlockState());
-                    level.levelEvent(LevelEvent.SOUND_DISPENSER_DISPENSE, source.getPos(), 0);
-                    return new ItemStack(fluid.getBucket());
+                Level level = source.getLevel();
+                BlockPos pos = source.getPos().relative(source.getBlockState().getValue(DispenserBlock.FACING));
+
+                if (level.getBlockEntity(pos) instanceof CauldronBlockEntity blockEntity) {
+                    Fluid fluid = getFluidForCauldron(blockEntity.getBlockState());
+                    if (fluid != null) {
+                        blockEntity.replaceBlockAndUpdate(Blocks.CAULDRON.defaultBlockState());
+                        level.levelEvent(LevelEvent.SOUND_DISPENSER_DISPENSE, source.getPos(), 0);
+                        item.shrink(1);
+                        ItemStack filled = new ItemStack(fluid.getBucket());
+                        if (item.isEmpty()) {
+                            return filled;
+                        }
+                        if (source.<DispenserBlockEntity>getEntity().addItem(filled) < 0) {
+                            super.dispense(source, filled);
+                        }
+                        return item;
+                    }
                 }
+                return defaultReturn.dispense(source, item);
             }
-            return defaultReturn.dispense(source, item);
         };
     }
 
